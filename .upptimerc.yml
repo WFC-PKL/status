@@ -1,31 +1,104 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Uptime monitor and status page for WFC Pekalongan.
+# Checks run from GitHub Actions every 5 minutes, outside Cloudflare.
+# Runbook: WFC-PKL/wfcp docs/operations.md, "Monitoring and outages".
+owner: WFC-PKL
+repo: status
+user-agent: WFC-PKL
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Website
+    url: https://wfc.my.id/
+    maxResponseTime: 10000
+  - name: Jono (bot Telegram)
+    url: https://bot.wfc.my.id/
+    maxResponseTime: 10000
+
+# Only these secrets reach Upptime (GH_PAT is passed separately).
+secrets:
+  - NOTIFICATION_TELEGRAM
+  - NOTIFICATION_TELEGRAM_BOT_KEY
+  - NOTIFICATION_TELEGRAM_CHAT_ID
+
+# Keep our own repository description and topics.
+skipDescriptionUpdate: true
+skipTopicsUpdate: true
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.wfc.my.id
+  name: Status WFC Pekalongan
+  logoUrl: https://status.wfc.my.id/logo.svg
+  favicon: https://wfc.my.id/favicon.ico
+  themeUrl: https://status.wfc.my.id/wfc-theme.css
+  introTitle: "**Status layanan WFC Pekalongan**"
+  introMessage: Website [wfc.my.id](https://wfc.my.id) dan bot Telegram Jono dicek dari luar setiap 5 menit. Kalau ada gangguan, pengurus langsung dapat kabar.
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: wfc.my.id
+      href: https://wfc.my.id
+  metaTags:
+    - name: color-scheme
+      content: light dark
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+i18n:
+  activeIncidents: Gangguan yang sedang terjadi
+  allSystemsOperational: Semua layanan berjalan normal
+  incidentReport: "Laporan gangguan #$NUMBER →"
+  activeIncidentSummary: Dibuka $DATE dengan $POSTS pembaruan
+  incidentTitle: Detail gangguan $NUMBER
+  incidentDetails: Detail gangguan
+  incidentFixed: Sudah pulih
+  incidentOngoing: Sedang berlangsung
+  incidentOpenedAt: Dibuka
+  incidentClosedAt: Ditutup
+  incidentViewOnGitHub: Lihat di GitHub
+  incidentCommentSummary: Ditulis $DATE oleh $AUTHOR
+  incidentBack: ← Kembali ke semua gangguan
+  pastIncidents: Gangguan sebelumnya
+  pastIncidentsResolved: Pulih dalam $MINUTES menit dengan $POSTS pembaruan
+  liveStatus: Status saat ini
+  overallUptime: "Uptime keseluruhan: $UPTIME"
+  overallUptimeTitle: Uptime keseluruhan
+  averageResponseTime: "Rata-rata waktu respons: $TIMEms"
+  averageResponseTimeTitle: Rata-rata respons
+  sevelDayResponseTime: Waktu respons 7 hari
+  responseTimeMs: Waktu respons (ms)
+  up: Normal
+  down: Gangguan
+  degraded: Lambat
+  ms: ms
+  loading: Memuat
+  navGitHub: GitHub
+  footer: Halaman ini [open source]($REPO), dibuat dengan [Upptime](https://upptime.js.org)
+  rateLimitExceededTitle: Terlalu banyak permintaan
+  rateLimitExceededIntro: Batas permintaan per jam sudah terlewati, jadi halaman ini perlu menunggu sebelum bisa dimuat lagi. Atau, tambahkan GitHub Personal Access Token untuk lanjut.
+  rateLimitExceededWhatDoesErrorMean: Apa artinya?
+  rateLimitExceededErrorMeaning: Halaman ini mengambil data status langsung dari GitHub API. GitHub mengizinkan 60 permintaan per jam untuk tiap alamat IP, dan batas itu sudah terpakai.
+  rateLimitExceededErrorHowCanFix: Bagaimana memperbaikinya?
+  rateLimitExceededErrorFix: Tunggu sekitar satu jam sampai batasnya pulih. Atau, tambahkan GitHub Personal Access Token untuk mendapat tambahan 5.000 permintaan per jam.
+  rateLimitExceededGeneratePAT: Cara membuat Personal Access Token
+  rateLimitExceededHasSet: Personal access token sudah dipasang.
+  rateLimitExceededRemoveToken: Hapus token
+  rateLimitExceededGitHubPAT: GitHub Personal Access Token
+  rateLimitExceededCopyPastePAT: Salin dan tempel token
+  rateLimitExceededSaveToken: Simpan token
+  errorTitle: Terjadi kesalahan
+  errorIntro: Data status terbaru gagal dimuat.
+  errorText: Coba lagi sebentar lagi.
+  errorHome: Ke beranda
+  pastScheduledMaintenance: Pemeliharaan sebelumnya
+  scheduledMaintenance: Pemeliharaan terjadwal
+  scheduledMaintenanceSummaryStarted: Dimulai $DATE selama $DURATION menit
+  scheduledMaintenanceSummaryStarts: Dimulai $DATE selama $DURATION menit
+  startedAt: Dimulai
+  startsAt: Mulai
+  duration: Durasi
+  durationMin: $DURATION menit
+  incidentCompleted: Selesai
+  incidentScheduled: Terjadwal
+  duration24H: 24 jam
+  duration7D: 7 hari
+  duration30D: 30 hari
+  duration1Y: 1 tahun
+  durationAll: semua
+  locale: id-ID
