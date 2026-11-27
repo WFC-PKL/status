@@ -12,6 +12,9 @@ sites:
   - name: Jono (bot Telegram)
     url: https://bot.wfc.my.id/
     maxResponseTime: 10000
+  # Temporary: failure test for the Telegram alert. Remove after the test.
+  - name: Uji alert (sementara)
+    url: https://uji-alert.invalid/
 
 # Only these secrets reach Upptime (GH_PAT is passed separately).
 secrets:
