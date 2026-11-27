@@ -4,17 +4,17 @@
     "url": "https://wfc.my.id/",
     "icon": "https://icons.duckduckgo.com/ip3/wfc.my.id.ico",
     "slug": "website",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 0,
-    "timeDay": 0,
-    "timeWeek": 0,
-    "timeMonth": 0,
-    "timeYear": 0,
+    "time": 2649,
+    "timeDay": 2649,
+    "timeWeek": 2649,
+    "timeMonth": 2649,
+    "timeYear": 2649,
     "dailyMinutesDown": {}
   },
   {
@@ -22,17 +22,37 @@
     "url": "https://bot.wfc.my.id/",
     "icon": "https://icons.duckduckgo.com/ip3/bot.wfc.my.id.ico",
     "slug": "jono-bot-telegram",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
+    "time": 2649,
+    "timeDay": 2649,
+    "timeWeek": 2649,
+    "timeMonth": 2649,
+    "timeYear": 2649,
+    "dailyMinutesDown": {}
+  },
+  {
+    "name": "Uji alert (sementara)",
+    "url": "https://uji-alert.invalid/",
+    "icon": "https://icons.duckduckgo.com/ip3/uji-alert.invalid.ico",
+    "slug": "uji-alert-sementara",
+    "status": "up",
+    "uptime": "78.21%",
+    "uptimeDay": "78.21%",
+    "uptimeWeek": "78.21%",
+    "uptimeMonth": "78.21%",
+    "uptimeYear": "78.21%",
     "time": 0,
     "timeDay": 0,
     "timeWeek": 0,
     "timeMonth": 0,
     "timeYear": 0,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-11-27": 0
+    }
   }
 ]
